@@ -12,9 +12,11 @@
 import React, {useState, useEffect} from 'react';
 import GridView from '../components/GridView';
 import ListView from '../components/ListView';
+import GridIcon from '../svgs/grid-view.svg';
+import ListIcon from '../svgs/list-view.svg';
 
 const Index = () => {
-  const [grid, setGrid] = useState(false);
+  const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
   const [data, setData] = useState([]);
 
@@ -38,23 +40,19 @@ const Index = () => {
     getData();
   }, [grid, list])
 
-  console.log(data)
-
   return (
     <div>
       <div>
       My Joggs
         <span>
-          <button onClick={gridView}>Grid</button>
-          <button onClick={listView}>List</button>
+          {grid ? <GridIcon id='active' onClick={gridView} /> : <GridIcon id='deactive' onClick={gridView} />}
+          {list ? <ListIcon id='active' onClick={listView} /> : <ListIcon id='deactive' onClick={listView} />}
         </span>
       </div>
 
-      {
-      grid ? <GridView data={data} />
+      {grid ? <GridView data={data} />
       : list ? <ListView data={data} />
-      : null
-      }
+      : null} 
       
     </div>
   )

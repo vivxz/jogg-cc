@@ -1,14 +1,3 @@
-// export default function Index() {
-//   const getData = async () => {
-//     const data = await fetch("/api/cards").then((res) => res.json());
-//     console.log(data);
-//   };
-
-//   getData();
-
-//   return <div>Start building your app 🤟</div>;
-// }
-
 import React, {useState} from 'react';
 import useSWR from 'swr'
 import GridView from '../components/GridView';
@@ -30,8 +19,8 @@ const Index = () => {
   async function getData (...args) {
     const data = await fetch(...args)
     .then((res) => res.json())
-    setData(data)
-    setTimeout(() => setLoading(false), 1000)
+    setData(data); // Adding retrieved data to state
+    setTimeout(() => setLoading(false), 1500); // Loading screen will last 1.5 seconds
   }
   
   if (error) {
@@ -75,4 +64,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Index;

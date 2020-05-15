@@ -2,7 +2,6 @@ import React from 'react';
 import styling from '../styles/stylesheet'
 
 const ListCard = (props) => {
-
   // Created an array of the months full name
   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var dates = new Date (props.card.date);

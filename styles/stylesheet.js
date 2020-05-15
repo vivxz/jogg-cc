@@ -87,18 +87,6 @@ border-radius: 50%;
 display: inline-block;
 `,
 
-// GridCard.js & ListCard.js
-StatusStyle : styled.span `
-text-transform: uppercase;
-font-weight: bold;
-font-size: 12px;
-letter-spacing: 1px;
-color: #fff;
-position: relative;
-top: -3.5em;
-left: 2.5em;
-`,
-
 GridTitle : styled.div `
 font-weight: bold;
 font-size: 17px;
@@ -157,6 +145,7 @@ text-align: left;
 position: relative;
 margin: 23px 20px;
 border-collapse: collapse;
+table-layout: fixed;
 `,
 
 ListEmptyHeader : styled.th `
@@ -170,7 +159,7 @@ text-transform: uppercase;
 color: ${colors.gray};
 `,
 
-ListHeaderRow : styled. tr `
+ListHeaderRow : styled.tr `
 line-height: 2em;
 `,
 
@@ -239,6 +228,18 @@ position: relative;
 bottom: 0.2em;
 text-transform: capitalize;
 padding-right: 20px;
+`,
+
+// GridCard.js & ListCard.js
+StatusStyle : styled.span `
+text-transform: uppercase;
+font-weight: bold;
+font-size: 12px;
+letter-spacing: 1px;
+color: #fff;
+position: relative;
+top: -3.5em;
+left: 2.5em;
 `
 }
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import GridCard from './GridCard';
+import styling from '../styles/stylesheet'
 
 const GridView = (props) => {
   return (
-    <div>
+    <styling.GridViewStyle>
       {props.data.map((card, index) => (
         <GridCard card={card} key={index}/>
       ))}
-    </div>
+    </styling.GridViewStyle>
   )
 }
 

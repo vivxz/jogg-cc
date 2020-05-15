@@ -16,7 +16,7 @@ import ListView from '../components/ListView';
 import GridIcon from '../svgs/grid-view.svg';
 import ListIcon from '../svgs/list-view.svg';
 
-import styling from '../styles/style';
+import styling from '../styles/stylesheet';
 
 const Index = () => {
   const [grid, setGrid] = useState(true);

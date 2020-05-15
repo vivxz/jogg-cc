@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;" overflow="hidden" width="500px" height="500px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;" width="500px" height="500px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
 <g transform="translate(20 50)">
-<circle cx="0" cy="0" r="6" fill="#ffaeb3" transform="scale(0.732944 0.732944)">
+<circle cx="0" cy="0" r="6" fill="#C5327B" transform="scale(0.732944 0.732944)">
   <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
 </circle>
 </g><g transform="translate(40 50)">
-<circle cx="0" cy="0" r="6" fill="#fce791" transform="scale(0.383752 0.383752)">
+<circle cx="0" cy="0" r="6" fill="#59595B" transform="scale(0.383752 0.383752)">
   <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
 </circle>
 </g><g transform="translate(60 50)">
-<circle cx="0" cy="0" r="6" fill="#d7eda6" transform="scale(0.083308 0.083308)">
+<circle cx="0" cy="0" r="6" fill="#EA4A26" transform="scale(0.083308 0.083308)">
   <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
 </circle>
 </g><g transform="translate(80 50)">
-<circle cx="0" cy="0" r="6" fill="#a6ceed" transform="scale(0.0221539 0.0221539)">
+<circle cx="0" cy="0" r="6" fill="#0EA0A0" transform="scale(0.0221539 0.0221539)">
   <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
 </circle>
 </g>

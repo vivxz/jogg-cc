@@ -25,7 +25,6 @@ Loader : styled.div `
 width: 100vw;
 height: 100vh;
 overflow: hidden;
-
 `,
 
 Header : styled.div `
@@ -144,6 +143,12 @@ position: relative;
 top: 6px;
 `,
 
+GridScheduled : styled.div `
+border-bottom: 5px solid ${colors.redViolet};
+position: relative;
+top: 6px;
+`,
+
 // ListView.js
 ListViewStyle : styled.table `
 display: table;
@@ -198,19 +203,25 @@ bottom: 0.2em;
 padding-right: 20px;
 `,
 
-ListOngoing : styled.span `
+ListOngoing : styled.td `
 display: table-cell;
 padding-left: 20px;
 border-left: 5px solid ${colors.persiangreen};
 `,
 
-ListEnded : styled.span `
+ListEnded : styled.td `
 display: table-cell;
 padding-left: 20px;
 border-left: 5px solid ${colors.cinnabar};
 `,
 
-OptionDot : styled.span `
+ListScheduled : styled.td `
+display: table-cell;
+padding-left: 20px;
+border-left: 5px solid ${colors.redViolet};
+`,
+
+OptionDot : styled.div `
 height: 6px;
 width: 6px;
 margin-right: 6px;
@@ -229,7 +240,6 @@ bottom: 0.2em;
 text-transform: capitalize;
 padding-right: 20px;
 `
-
 }
 
 export default styling;

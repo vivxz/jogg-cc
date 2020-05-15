@@ -145,7 +145,6 @@ text-align: left;
 position: relative;
 margin: 23px 20px;
 border-collapse: collapse;
-table-layout: fixed;
 `,
 
 ListEmptyHeader : styled.th `

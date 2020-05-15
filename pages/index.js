@@ -10,10 +10,12 @@
 // }
 
 import React, {useState, useEffect} from 'react';
+import useSWR from 'swr'
 import GridView from '../components/GridView';
 import ListView from '../components/ListView';
 import GridActive from '../svgs/grid-view.svg';
 import ListActive from '../svgs/list-view.svg';
+import Loading from '../svgs/loading.svg';
 import GridInactive from '../svgs/grid-view-inactive.svg';
 import ListInactive from '../svgs/list-view-inactive.svg';
 import styling from '../styles/stylesheet';
@@ -22,6 +24,19 @@ const Index = () => {
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const {items, error} = useSWR('/api/cards', getData);
+
+  async function getData (...args) {
+    const data = await fetch(...args)
+    .then((res) => res.json())
+    setData(data)
+    setTimeout(() => setLoading(false), 1000)
+  }
+  
+  if (error) {
+    console.error(error)
+  }
 
   const gridView = () => {
     setGrid(true);
@@ -32,18 +47,10 @@ const Index = () => {
     setList(true);
     setGrid(false);
   }
-
-  async function getData () {
-    const items = await fetch('/api/cards')
-    .then((res) => res.json())
-    setData(items)
-  }
   
-  useEffect(() => {
-    getData();
-  }, [grid, list])
-
   return (
+    <div>
+
     <styling.Body>
       <styling.Header>
 
@@ -60,14 +67,17 @@ const Index = () => {
 
       </styling.Header>
 
-      {/* Content depending on whether grid or list is clicked */}
+      {/* Loading or Content */}
+      {loading ? <styling.Loader> <Loading /> </styling.Loader> : 
       <styling.Content>
         {grid ? <GridView data={data} />
         : list ?  <ListView data={data} />
         : null} 
       </styling.Content>
+      }
       
     </styling.Body>
+    </div>
   )
 }
 

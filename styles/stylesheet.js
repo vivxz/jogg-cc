@@ -13,10 +13,19 @@ const Colors = {
 const styling = {
 // Index.js
 Body : styled.div `
+font-family: 'Roboto Condensed', sans-serif;
 display: flex;
 flex-direction: column;
 align-items:center;
 background-color: ${Colors.background};
+overflow-x: hidden;
+`,
+
+Loader : styled.div `
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+
 `,
 
 Header : styled.div `
@@ -93,14 +102,16 @@ left: 2.5em;
 GridTitle : styled.div `
 font-weight: bold;
 font-size: 17px;
+color: ${Colors.gray};
 margin-left: 13px;
-text-overflow: ellipsis;
 height: 2.5em;
+width: 90%
 `,
 
 GridReply : styled.div `
 position: relative;
 left: 17px;
+font-size: 14px;
 `,
 
 GridDetail : styled.div `
@@ -111,7 +122,7 @@ margin: 1em 13em 0 0;
 
 GridIcontainer : styled.div `
 position: relative;
-left: 12.5em;
+left: 11.5em;
 `,
 
 GridIcon : styled.svg `
@@ -121,15 +132,15 @@ margin-left: 7px;
 `,
 
 GridOngoing : styled.div `
-border-bottom: 3px solid ${Colors.persiangreen};
+border-bottom: 5px solid ${Colors.persiangreen};
 position: relative;
-top: 3px;
+top: 6px;
 `,
 
 GridEnded : styled.div `
-border-bottom: 3px solid ${Colors.cinnabar};
+border-bottom: 5px solid ${Colors.cinnabar};
 position: relative;
-top: 3px;
+top: 6px;
 `
 
 }

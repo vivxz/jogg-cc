@@ -1,4 +1,5 @@
 import React from 'react';
+import styling from '../styles/stylesheet'
 
 const ListCard = (props) => {
 
@@ -20,16 +21,41 @@ const ListCard = (props) => {
   var date = `${month[dates[1]]} ${dates[2]}, ${dates[3]}`;
 
   return (
-    <tr>
-      <td><img src={props.card.image} />
-      <span className="card-name">{props.card.title}</span></td>
-      <td>{props.card.replies > 1 ? `${props.card.replies} replies` : `${props.card.replies} reply`}</td>
-      <td>{props.card.status}</td>
-      <td>{date}</td>
-    </tr>
+    <styling.ListRow>
+      {/* <td> */}
+
+      {/* Checking the status for the color of the bar on the left side of the cards */}
+      { props.card.status === 'ongoing' ?
+        <styling.ListOngoing></styling.ListOngoing> 
+        : props.card.status === 'ended' ? 
+        <styling.ListEnded></styling.ListEnded> 
+        : <span></span>
+      }
+      {/* </td> */}
+      <td>
+        {/* Image */}
+        <styling.ListImg src={props.card.image} />
+        {/* Title */}
+        <styling.ListTitle>{props.card.title}</styling.ListTitle>
+      </td>
+      <styling.ListDetail>
+        {/* Creating a dot whether there are replies, and whether to use singlar or plural for 'reply' */}
+        { props.card.replies >= 1 ? <div> <styling.StatusDot></styling.StatusDot>
+          {props.card.replies > 1 ? `${props.card.replies} replies` : `${props.card.replies} reply`}
+        </div>: <div>{`${props.card.replies} reply`}</div> }
+      </styling.ListDetail>
+      {/* Status */}
+      <styling.ListStatus>{props.card.status}</styling.ListStatus>
+      {/* Date Created */}
+      <styling.ListDetail>{date}</styling.ListDetail>
+      <styling.ListDetail>
+          {/* Creating 3 dots */}
+        <styling.OptionDot></styling.OptionDot> 
+        <styling.OptionDot></styling.OptionDot>
+        <styling.OptionDot></styling.OptionDot>        
+      </styling.ListDetail>
+    </styling.ListRow>
   )
 }
-
-// Take into account border left ––– red = ended and green = ongoingg
 
 export default ListCard;

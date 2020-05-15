@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Colors = {
+const colors = {
   background: '#F5F5F5',
   gray: '#59595B',
   redViolet: '#C5327B',
@@ -17,7 +17,7 @@ font-family: 'Roboto Condensed', sans-serif;
 display: flex;
 flex-direction: column;
 align-items:center;
-background-color: ${Colors.background};
+background-color: ${colors.background};
 overflow-x: hidden;
 `,
 
@@ -39,7 +39,7 @@ margin: 15px 0 0 35px;
 Title : styled.span `
 font-size: 25px;
 font-weight: bold;
-color: ${Colors.gray}
+color: ${colors.gray}
 `,
 
 Icontainer : styled.span `
@@ -54,7 +54,7 @@ margin-left: 10px;
 
 Content : styled.div `
 width: 97%;
-background-color: ${Colors.white};
+background-color: ${colors.white};
 margin: 2em;
 `,
 
@@ -83,11 +83,12 @@ StatusDot : styled.span `
 height: 9px;
 width: 9px;
 margin-right: 6px;
-background-color: ${Colors.cinnabar};
+background-color: ${colors.cinnabar};
 border-radius: 50%;
 display: inline-block;
 `,
 
+// GridCard.js & ListCard.js
 StatusStyle : styled.span `
 text-transform: uppercase;
 font-weight: bold;
@@ -102,7 +103,7 @@ left: 2.5em;
 GridTitle : styled.div `
 font-weight: bold;
 font-size: 17px;
-color: ${Colors.gray};
+color: ${colors.gray};
 margin-left: 13px;
 height: 2.5em;
 width: 90%
@@ -132,15 +133,101 @@ margin-left: 7px;
 `,
 
 GridOngoing : styled.div `
-border-bottom: 5px solid ${Colors.persiangreen};
+border-bottom: 5px solid ${colors.persiangreen};
 position: relative;
 top: 6px;
 `,
 
 GridEnded : styled.div `
-border-bottom: 5px solid ${Colors.cinnabar};
+border-bottom: 5px solid ${colors.cinnabar};
 position: relative;
 top: 6px;
+`,
+
+// ListView.js
+ListViewStyle : styled.table `
+display: table;
+width: 97%;
+text-align: left;
+position: relative;
+margin: 23px 20px;
+border-collapse: collapse;
+`,
+
+ListEmptyHeader : styled.th `
+width: 10px
+`,
+
+ListHeader : styled.th `
+font-size: 13px;
+font-weight: bold;
+text-transform: uppercase;
+color: ${colors.gray};
+`,
+
+ListHeaderRow : styled. tr `
+line-height: 2em;
+`,
+
+// ListCard.js
+ListRow : styled.tr `
+line-height: 4em;
+`,
+
+ListImg : styled.img `
+height: 45px;
+width: 85px;
+position: relative;
+top: 7px;
+`,
+
+ListTitle : styled.span `
+position: relative;
+text-transform: uppercase;
+bottom: 0.6em;
+font-size: 15px;
+font-weight: bold;
+margin-left: 1em;
+color: ${colors.persiangreen};
+`,
+
+ListDetail : styled.td `
+font-size: 14px;
+position: relative;
+bottom: 0.2em;
+padding-right: 20px;
+`,
+
+ListOngoing : styled.span `
+display: table-cell;
+padding-left: 20px;
+border-left: 5px solid ${colors.persiangreen};
+`,
+
+ListEnded : styled.span `
+display: table-cell;
+padding-left: 20px;
+border-left: 5px solid ${colors.cinnabar};
+`,
+
+OptionDot : styled.span `
+height: 6px;
+width: 6px;
+margin-right: 6px;
+background-color: #0EA0A0;
+border-radius: 50%;
+display: inline-block;
+position: relative;
+bottom: 0.2em;
+`,
+
+ListStatus : styled.th `
+font-size: 14px;
+font-weight: normal;
+position: relative;
+bottom: 0.2em;
+text-transform: capitalize;
+padding-right: 20px;
 `
 
 }

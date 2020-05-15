@@ -4,7 +4,6 @@ import LinkIcon from '../svgs/link-icon.svg';
 import styling from '../styles/stylesheet'
 
 const GridCard = (props) => {
-
   return (
     <styling.GridCardStyle>
       <div>
@@ -37,12 +36,12 @@ const GridCard = (props) => {
             <styling.GridIcon><LinkIcon /></styling.GridIcon>
           </styling.GridIcontainer>
         </styling.GridDetail>
-        {/* Status bar below card */}
+        {/* Checking the status for the color of the bar below the cards */}
         { props.card.status === 'ongoing' ?
         <styling.GridOngoing></styling.GridOngoing> 
         : props.card.status === 'ended' ? 
         <styling.GridEnded></styling.GridEnded> 
-        : null
+        : <styling.GridScheduled></styling.GridScheduled>
         }
       </div>
     </styling.GridCardStyle>

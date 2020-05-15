@@ -9,7 +9,7 @@
 //   return <div>Start building your app 🤟</div>;
 // }
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import useSWR from 'swr'
 import GridView from '../components/GridView';
 import ListView from '../components/ListView';
@@ -50,23 +50,18 @@ const Index = () => {
   
   return (
     <div>
-
     <styling.Body>
       <styling.Header>
-
         {/* Title */}
         <styling.Title>
           My Joggs
         </styling.Title>
-
         {/* Toggle between grid and list */}
         <styling.Icontainer>
           {grid ? <styling.ViewStyle onClick={gridView}> <GridActive /> </styling.ViewStyle> : <styling.ViewStyle onClick={gridView}><GridInactive /></styling.ViewStyle>}
           {list ? <styling.ViewStyle onClick={listView}><ListActive /></styling.ViewStyle> : <styling.ViewStyle onClick={listView}><ListInactive /></styling.ViewStyle>}
         </styling.Icontainer>
-
       </styling.Header>
-
       {/* Loading or Content */}
       {loading ? <styling.Loader> <Loading /> </styling.Loader> : 
       <styling.Content>
@@ -75,7 +70,6 @@ const Index = () => {
         : null} 
       </styling.Content>
       }
-      
     </styling.Body>
     </div>
   )

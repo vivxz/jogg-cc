@@ -3,7 +3,6 @@ import ListCard from './ListCard';
 import styling from '../styles/stylesheet';
 
 const ListView = (props) => {
-
   return (
     <styling.ListViewStyle>
       <tbody>
@@ -16,7 +15,7 @@ const ListView = (props) => {
         <styling.ListHeader>Date Created</styling.ListHeader>
         <styling.ListHeader>Options</styling.ListHeader>
       </styling.ListHeaderRow>
-      
+
       {props.data.map((card, index) => (
         <ListCard card={card} key={index}/>
       ))}

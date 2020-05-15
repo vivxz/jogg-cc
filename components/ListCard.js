@@ -3,35 +3,23 @@ import styling from '../styles/stylesheet'
 
 const ListCard = (props) => {
 
-  var month =
-    { 'Jan':'January', 
-    'Feb':'Febuary', 
-    'Mar':'March', 
-    'Apr':'April', 
-    'May':'May', 
-    'Jun':'June', 
-    'Jul':'July', 
-    'Aug':'August', 
-    'Sep':'September', 
-    'Oct':'October', 
-    'Nov':'November', 
-    'Dec':'December'}
+  // Created an array of the months full name
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var dates = new Date (props.card.date);
+  var MM = dates.getMonth(); // returns a number from 0 to 11 ; will be used as an index
+  var DD = dates.getDate(); // returns the date
+  var YYYY = dates.getFullYear(); // returns the year
+  var date = `${months[MM]} ${DD}, ${YYYY}`; // Formatted date to MM DD, YYYY
   
-  var dates = props.card.date.split(' ');
-  var date = `${month[dates[1]]} ${dates[2]}, ${dates[3]}`;
-
   return (
     <styling.ListRow>
-      {/* <td> */}
-
       {/* Checking the status for the color of the bar on the left side of the cards */}
       { props.card.status === 'ongoing' ?
         <styling.ListOngoing></styling.ListOngoing> 
         : props.card.status === 'ended' ? 
         <styling.ListEnded></styling.ListEnded> 
-        : <span></span>
+        : <styling.ListScheduled></styling.ListScheduled>
       }
-      {/* </td> */}
       <td>
         {/* Image */}
         <styling.ListImg src={props.card.image} />
